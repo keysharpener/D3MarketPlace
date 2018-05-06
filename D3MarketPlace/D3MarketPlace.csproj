@@ -39,6 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ObjectModel\Currency.cs" />
+    <Compile Include="ObjectModel\Product.cs" />
+    <Compile Include="ObjectModel\ProductType.cs" />
+    <Compile Include="ObjectModel\Rarity.cs" />
+    <Compile Include="ObjectModel\Transaction.cs" />
+    <Compile Include="ObjectModel\Way.cs" />
+    <Compile Include="ProductBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
