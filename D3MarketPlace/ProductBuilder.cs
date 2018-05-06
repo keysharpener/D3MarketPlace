@@ -5,7 +5,7 @@ namespace D3MarketPlace
 {
     public class ProductBuilder
     {
-git         public ICollection<Product> GetAllProducts()
+        public ICollection<Product> GetAllProducts()
         {
             var products = new List<Product>
             {
