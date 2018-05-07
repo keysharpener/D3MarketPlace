@@ -7,7 +7,7 @@ namespace D3MarketPlace.ObjectModel
         public int Id { get; set; }
         public string Trader { get; set; }
         public int Quantity { get; set; }
-        public int UnitPrice { get; set; }
+        public double UnitPrice { get; set; }
         public int Version { get; set; }
         public string Counterparty { get; set; }
         public Currency Currency { get; set; }
