@@ -85,7 +85,7 @@ namespace D3MarketPlace
 
         private Transaction GetTrade()
         {
-            var random = new Random();
+            var random = new Random(GetSeed());
             var transaction = new Transaction();
             transaction.Trader = GetRandomElementFromList(_traders);
             transaction.Counterparty = GetRandomElementFromList(_counterparties);
