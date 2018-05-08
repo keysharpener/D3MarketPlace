@@ -86,17 +86,19 @@ namespace D3MarketPlace
         private Transaction GetTrade()
         {
             var random = new Random(GetSeed());
-            var transaction = new Transaction();
-            transaction.Trader = GetRandomElementFromList(_traders);
-            transaction.Counterparty = GetRandomElementFromList(_counterparties);
-            transaction.Currency = transaction.Counterparty == "Kadala" ? Currency.BloodShards : Currency.Gold;
-            transaction.LastUpdateTime = DateTime.Now;
-            transaction.TradeDate = DateTime.Today;
-            transaction.Id = _transactions.Count + 1;
-            transaction.Product = GetRandomElementFromList(_products);
-            transaction.Quantity = random.Next(1, 10);
-            transaction.UnitPrice = random.NextDouble() * 100;
+            var transaction = new Transaction
+            {
+                Trader = GetRandomElementFromList(_traders),
+                Counterparty = GetRandomElementFromList(_counterparties),
+                LastUpdateTime = DateTime.Now,
+                TradeDate = DateTime.Today,
+                Id = _transactions.Count + 1,
+                Product = GetRandomElementFromList(_products),
+                Quantity = random.Next(1, 10),
+                UnitPrice = random.NextDouble() * 100
+            };
             transaction.Version = _transactions.Count(t => t.Id == transaction.Id);
+            transaction.Currency = transaction.Counterparty == "Kadala" ? Currency.BloodShards : Currency.Gold;
             return transaction;
         }
 
