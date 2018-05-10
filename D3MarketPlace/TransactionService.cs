@@ -53,6 +53,12 @@ namespace D3MarketPlace
             return _transactions;
         }
 
+        public void AddTrade(Transaction transaction)
+        {
+            transaction.Id = _transactions.Count + 1;
+            _transactions.Add(transaction);
+        }
+        
         public ICollection<Transaction> GetRandomTrades(int numberOfDeals)
         {
             var result = new Collection<Transaction>();

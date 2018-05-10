@@ -4,7 +4,7 @@ namespace D3MarketPlace.ObjectModel
 {
     public class Transaction
     {
-        public int Id { get; set; }
+        public int Id { get; internal set; }
         public string Trader { get; set; }
         public int Quantity { get; set; }
         public double UnitPrice { get; set; }
