@@ -59,7 +59,7 @@ The data model in the code will be the following :
 
     public enum CharacterClass
     {
-        Barbarian, Witch Doctor, Wizard, Monk, Demon Hunter, Crusader, Necromancer
+        Barbarian, WitchDoctor, Wizard, Monk, DemonHunter, Crusader, Necromancer
     }
 
     public enum ProductType
